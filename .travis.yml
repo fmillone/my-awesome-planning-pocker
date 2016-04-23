@@ -1,0 +1,17 @@
+language: groovy
+
+jdk:
+  - oraclejdk8
+
+#before_install:
+#  - pip install codecov
+
+#before_script:
+#  - npm install -g grunt-cli
+#  - npm install -g bower
+#  - npm install -g tsd
+
+script: gradle test
+
+after_success:
+  - bash <(curl -s https://codecov.io/bash)
