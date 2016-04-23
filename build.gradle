@@ -19,18 +19,19 @@ buildscript {
     }
 }
 
+
 version "0.1"
 group "awesome.pp"
 
-apply plugin:"eclipse"
-apply plugin:"idea"
-apply plugin:"war"
-apply plugin:"org.grails.grails-web"
-apply plugin:"org.grails.grails-gsp"
-apply plugin:"com.craigburke.karma"
-apply plugin:"com.craigburke.bower-installer"
-apply plugin:"asset-pipeline"
-apply plugin:"org.grails.plugins.views-json"
+apply plugin: "eclipse"
+apply plugin: "idea"
+apply plugin: "war"
+apply plugin: "org.grails.grails-web"
+apply plugin: "org.grails.grails-gsp"
+apply plugin: "com.craigburke.karma"
+apply plugin: "com.craigburke.bower-installer"
+apply plugin: "asset-pipeline"
+apply plugin: "org.grails.plugins.views-json"
 
 apply plugin: "net.saliman.cobertura"
 
@@ -116,11 +117,25 @@ karma {
     profile 'angularJS'
 
     preprocessors = [
-        'grails-app/assets/javascripts/**/*.js': ['wrap']
+            'grails-app/assets/javascripts/**/*.js': ['wrap', 'coverage']
     ]
 
     wrapPreprocessor = [
-        template: "(function () { 'use strict';  <%= contents %> })()"
+            template: "(function () { 'use strict';  <%= contents %> })()"
+    ]
+
+    reporters = [
+            'dots',
+            'coverage',
+            'progress',
+            'coveralls'
+    ]
+    coverageReporter = [
+            dir: 'build/reports/coberturajs/',
+            reporters: [
+                    [ type: 'html',  subdir : 'html' ],
+                    [ type: 'lcov',  subdir : 'lcov' ],
+            ]
     ]
 }
 
@@ -131,8 +146,9 @@ assets {
 
 
 cobertura {
+    coverageFormats = ['html', 'xml']
     coverageExcludes = [
             /.*BootStrap($|\$.*)/,
             /.*awesome\.pp\.Application($|Loader$)/,
-            /.*awesome\.pp\.UrlMappings($|\$.*)/ ]
+            /.*awesome\.pp\.UrlMappings($|\$.*)/]
 }

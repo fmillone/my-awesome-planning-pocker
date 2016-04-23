@@ -3,4 +3,7 @@
 
 [![Code Coverage](https://img.shields.io/codecov/c/github/fmillone/my-awesome-planning-poker/master.svg)](https://codecov.io/github/fmillone/my-awesome-planning-poker?branch=master)
 
+
+[![Coverage Status](https://coveralls.io/repos/github/fmillone/my-awesome-planning-poker/badge.svg?branch=master)](https://coveralls.io/github/fmillone/my-awesome-planning-poker?branch=master)
+
 A super awesome planning poker app

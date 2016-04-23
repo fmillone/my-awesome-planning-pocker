@@ -3,7 +3,8 @@ language: groovy
 jdk:
   - oraclejdk8
 
-#before_install:
+before_install:
+  - ./gradlew clean
 #  - pip install codecov
 
 #before_script:
@@ -11,7 +12,8 @@ jdk:
 #  - npm install -g bower
 #  - npm install -g tsd
 
-script: gradle test
+#script: ./gradlew cobertura
 
 after_success:
-  - bash <(curl -s https://codecov.io/bash)
+  - ./gradlew cobertura
+  - bash <(curl -s https://codecov.io/bash) #report to codecov
