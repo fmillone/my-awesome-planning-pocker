@@ -1,9 +1,9 @@
 # my-awesome-planning-poker
-[![Build Status](https://travis-ci.org/fmillone/my-awesome-planning-poker.svg?branch=master)](https://travis-ci.org/fmillone/my-awesome-planning-poker)
 
-[![Code Coverage](https://img.shields.io/codecov/c/github/fmillone/my-awesome-planning-poker/master.svg)](https://codecov.io/github/fmillone/my-awesome-planning-poker?branch=master)
+### master Status [![Build Status](https://travis-ci.org/fmillone/my-awesome-planning-poker.svg?branch=master)](https://travis-ci.org/fmillone/my-awesome-planning-poker) [![Code Coverage](https://img.shields.io/codecov/c/github/fmillone/my-awesome-planning-poker/master.svg)](https://codecov.io/github/fmillone/my-awesome-planning-poker?branch=master)
 
 
-[![Coverage Status](https://coveralls.io/repos/github/fmillone/my-awesome-planning-poker/badge.svg?branch=master)](https://coveralls.io/github/fmillone/my-awesome-planning-poker?branch=master)
+![codecov.io](https://codecov.io/github/fmillone/my-awesome-planning-poker/branch.svg?branch=master)
+
 
 A super awesome planning poker app
