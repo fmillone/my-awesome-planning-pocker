@@ -1,4 +1,4 @@
 comment:
-  layout: header, changes, diff, uncover
+  layout: header, changes, diff, uncovered
 coverage:
   status: {}
