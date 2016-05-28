@@ -41,6 +41,7 @@ grails-app/assets/bower/
 *.ipr
 *.iws
 *.iml
+.idea/
 
 #gradle cached files
 .gradle/
